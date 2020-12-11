@@ -1,1 +1,12 @@
-<%= content_tag :h1, "#{@search.members.count} Members Of #{@search.nation} Nation" %>
+<%= content_tag :h1, "#{@members.count} Members" %>
+<% @members.each do |member| %>
+  <ul class="member">
+    <li class="name"> Nation Member: <%= member.name %> </li>
+    <li class="allies"> Allies: <%= member.allies %> </li>
+    <li class="enemies"> Enemies <%= member.enemies %> </li>
+    <li class="photo"><%= member.photo_url %>
+      <%# only showing string above for image %>
+      <!-- <img src="#{member.photo_url}"> tried this to see if it worked it did not so i stuck with tests passing version -->
+      <%# would like feedback on how to do this better. I always struggle with images. %>
+  </ul>
+<% end %>
