@@ -18,6 +18,7 @@ describe "As a Visitor" do
       expect(page).to have_css(".name")
       expect(page).to have_css(".allies")
       expect(page).to have_css(".enemies")
+      expect(page).to have_css(".photo")
     end
   end
 end
